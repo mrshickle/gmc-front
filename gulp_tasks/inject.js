@@ -9,12 +9,11 @@ const conf = require('../conf/gulp.conf');
 gulp.task('inject', inject);
 
 function inject() {
+  const injectStyles = gulp.src([
+    conf.path.src('app/assets/shuttle/css/materialize.min.css'),
+    conf.path.src('**/*.css')
+    ], {read: false});
   const injectScripts = gulp.src([
-    conf.path.tmp('app/todos/todos.js'),
-    conf.path.tmp('index.js'),
-    conf.path.tmp('app/constants/*.js'),
-    conf.path.tmp('app/containers/*.js'),
-    conf.path.tmp('app/components/*.js'),
     conf.path.tmp('**/*.js'),
     `!${conf.path.tmp('**/*.spec.js')}`
   ]);
@@ -25,6 +24,7 @@ function inject() {
   };
 
   return gulp.src(conf.path.src('index.html'))
+    .pipe(gulpInject(injectStyles, injectOptions))
     .pipe(gulpInject(injectScripts, injectOptions))
     .pipe(wiredep(Object.assign({}, conf.wiredep)))
     .pipe(gulp.dest(conf.paths.tmp))
