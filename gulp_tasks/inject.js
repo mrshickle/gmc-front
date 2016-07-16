@@ -14,6 +14,7 @@ function inject() {
     conf.path.src('**/*.css')
     ], {read: false});
   const injectScripts = gulp.src([
+    conf.path.tmp('app/todos/todos.js'),
     conf.path.tmp('**/*.js'),
     `!${conf.path.tmp('**/*.spec.js')}`
   ]);
