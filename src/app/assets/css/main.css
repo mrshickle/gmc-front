@@ -203,7 +203,7 @@ hr {
     color: #01acc6 !important;
 }
 .primary-color {
-    background-color: #01acc6 !important;
+    background-color: #424242 !important;
 }
 .primary-border {
     border-color: #01acc6 !important;
@@ -252,7 +252,7 @@ hr {
     background: linear-gradient(135deg,#01acc6,#00555f);
 }
 .bg-shop {
-    background: url(../img/shop.jpg) no-repeat center / cover !important;
+    background: url(/app/assets/img/weed-slider.jpg) no-repeat center / cover !important;
 }
 
 /* Overlay */

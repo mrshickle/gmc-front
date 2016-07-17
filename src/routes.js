@@ -15,5 +15,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('login', {
       url: '/login',
       template: '<login></login>'
+    })
+    .state('categories', {
+      url: '/shop',
+      template: '<categories></categories>'
     });
 }

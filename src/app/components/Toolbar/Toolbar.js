@@ -6,6 +6,7 @@ angular
   });
 
 /** @ngInject */
-function ShuttleToolbarController() {
+function ShuttleToolbarController($state, $scope, $rootScope) {
+  $scope.activeState = $state.getCurrent;
   this.title = "Test Title";
 }
