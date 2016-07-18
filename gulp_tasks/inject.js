@@ -10,12 +10,13 @@ gulp.task('inject', inject);
 
 function inject() {
   const injectStyles = gulp.src([
-    conf.path.src('app/assets/css/materialize.min.css'),
+    conf.path.src('css/materialize.min.css'),
     conf.path.src('**/*.css')
     ], {read: false});
   const injectScripts = gulp.src([
     conf.path.tmp('**/*.js'),
-    `!${conf.path.tmp('**/*.spec.js')}`
+    `!${conf.path.tmp('**/*.spec.js')}`,
+    `!${conf.path.tmp('templateCacheHtml.js')}`
   ]);
 
   const injectOptions = {
