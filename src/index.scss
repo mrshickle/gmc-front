@@ -1,0 +1,34 @@
+$primary-color: #009688;
+$accent-color: #484848;
+
+.accent-text {
+  color: $accent-color !important;
+}
+.accent-color {
+  background-color: $accent-color !important;
+}
+.accent-border {
+  border-color: $accent-color !important;
+}
+.primary-text {
+  color: $primary-color !important;
+}
+.primary-color {
+  background-color: $primary-color !important;
+}
+.primary-border {
+  border-color: $primary-color !important;
+}
+
+
+.logo-main {
+  width:100%;
+  position: absolute;
+  background: url(/img/logo-banner.png) no-repeat center / 70% !important;
+  z-index: 1000;
+  height: 50%;
+}
+
+.home-page {
+  margin-top: -56px;
+}

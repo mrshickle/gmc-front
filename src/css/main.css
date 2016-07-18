@@ -221,7 +221,7 @@ hr {
 
 /* bg */
 .bg-1 {
-    background: url(../img/1.jpg) no-repeat center / cover !important;
+    background: url(/img/main-image.jpg) no-repeat center / cover !important;
 }
 .bg-2 {
     background: url(../img/2.jpg) no-repeat center / cover !important;
@@ -239,7 +239,7 @@ hr {
     background: url(../img/9.jpg) no-repeat center / cover !important;
 }
 .bg-material {
-    background: url(../img/material.jpg) no-repeat center / cover !important;
+    background: url(/img/material.jpg) no-repeat center / cover !important;
 }
 .bg-blur {
     background: url(../img/blur.jpg) no-repeat center / cover !important;
