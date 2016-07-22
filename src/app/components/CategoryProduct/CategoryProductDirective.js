@@ -1,16 +1,16 @@
 angular
   .module('app')
-  .directive('shopCategoryDirective', ShopCategoryDirective);
+  .directive('categoryProduct', CategoryProductDirective);
 
-function ShopCategoryDirective () {
+function CategoryProductDirective() {
   var dir = {};
-  dir.templateUrl = "app/components/ShopCategory/ShopCategory.html";
+  dir.templateUrl = "app/components/CategoryProduct/CategoryProduct.html";
   dir.scope = {
     image: "@",
-    title: "@",
-    subtitle: "@",
-    delay: "@",
-    full: "@"
+    name: "@",
+    category: "@",
+    prices: "=",
+    productSlug: "@"
   };
 
   return dir;

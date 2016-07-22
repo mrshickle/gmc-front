@@ -3,13 +3,20 @@
      ng:class="{false:'primary-color z-depth-1', true:'nav-material'}[$parent.toolbar.material]"
      class="{{$parent.toolbar.class}}"
 >
-    <div class="open-left" id="open-left" data-activates="slide-out-left">
+    <div class="open-left" id="open-left" data-activates="slide-out-left" ng-click="toggleSideBar()">
         <i class="ion-android-menu"></i>
     </div>
     <h1 class="title">{{$parent.toolbar.title}} </h1>
 
-    <div class="open-right" id="open-right" data-activates="slide-out" ng-show="$parent.toolbar.user">
-        <i class="ion-android-person"></i>
+    <div class="open-right" id="open-right" data-activates="slide-out">
+        <i class="ion-android-person" ng-show="$parent.toolbar.action == 'user'"></i>
+        <i class="ion-plus-round" ng-show="$parent.toolbar.action == 'addCreditCard'" ui-sref="AddCreditCard"></i>
     </div>
+
+    <ul tabs ng-show="$parent.toolbar.class == 'with-tab'">
+        <li class="tab col s3"><a class="active" href="#Indica-tab">Indica</a></li>
+        <li class="tab col s3"><a href="#Sativa-tab">Sativa</a></li>
+        <li class="tab col s3"><a href="#Hybrid-tab">Hybrid</a></li>
+    </ul>
 </div>
 <!-- End of Toolbar -->

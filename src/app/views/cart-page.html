@@ -1,0 +1,59 @@
+<ul class="checkout-header animated fadeindown delay-2" data-collapsible="accordion">
+    <li>
+        <div class="collapsible-header active">
+            Show order summary
+            <i class="ion-android-arrow-dropdown"></i>
+            <span class="checkout-price right">$240.00</span>
+        </div>
+        <div class="collapsible-body z-depth-1">
+
+            <!-- Products in cart -->
+            <div class="checkout-details">
+                <img class="checkout-image" src="img/user2.jpg" alt="">
+                <div class="checkout-product-title">
+                    <h6>Pair of Shoes <span class="right">$220.00</span></h6>
+                    <span>43 - 44</span>
+                </div>
+            </div>
+
+            <!-- Discount -->
+            <form class="discount">
+                <div class="input-field">
+                    <input id="code" type="text" class="validate">
+                    <label for="code">Discount code here</label>
+                    <div class="btn primary-color">
+                        <i class="ion-ios-arrow-thin-right"></i>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Subtotal -->
+            <div class="subtotal">
+                <h6>Subtotal <span class="right">$220.00</span></h6>
+                <span>Shipping <span class="right">$20.00</span></span>
+            </div>
+
+            <!-- Total -->
+            <div class="total">
+                <h4>Total <span class="right">$240.00</span></h4>
+            </div>
+
+        </div>
+    </li>
+</ul>
+
+<!-- Form Inputs -->
+<div class="form-inputs p-20">
+    <h4>Schedule Pick-up Time</h4>
+
+    <div>
+        <div class="input-field">
+            <label for="datetime">Pick-up date</label>
+            <input mdc-datetime-picker="" date="true" time="true" type="text" id="datetime"
+                   placeholder="Date" min-date="date" ng-model="dateTime" class=" md-input">
+        </div>
+    </div>
+
+
+    <a class="waves-effect waves-light btn-large primary-color block" href="index.html">Purchase</a>
+</div>

@@ -1,11 +1,18 @@
-<div class="shop-banner animated fadeinup delay-{{delay}}" ng-class="{ full: full }">
-    <a ui-sref="Category({'active':'{{title}}'})">
-        <img src="{{image}}" alt="">
-        <div class="opacity-overlay valign-wrapper">
-            <div class="valign center width-100">
-                <h3 class="white-text">{{title}}</h3>
-                <p class="white-text">{{subtitle}}</p>
-            </div>
+<div class="product prd-padding">
+    <a ui-sref="Product({'productSlug': '{{productSlug}}' })"><img src="{{image}}" alt=""></a>
+    <div class="product-info">
+        <!--<span class="small grey-text">{{category}}</span>-->
+        <h5 class="m-0"><strong>{{name}}</strong></h5>
+        <p class="m-0" ng-repeat="(k, p) in prices" ng-if="$index < 1">
+            ${{p}} <span class="small grey-text"> for {{k}}</span>
+        </p>
+        <!-- Rating -->
+        <div class="rating">
+            <i class="ion-star active"></i>
+            <i class="ion-star active"></i>
+            <i class="ion-star active"></i>
+            <i class="ion-star active"></i>
+            <i class="ion-star active"></i>
         </div>
-    </a>
+    </div>
 </div>

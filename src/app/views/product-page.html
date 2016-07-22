@@ -1,0 +1,55 @@
+<div class="hero-header animated fadein">
+    <!-- Slider -->
+    <div class="swiper-container swiper-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="{{currentProduct.image_url}}" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <!-- End of Slider -->
+
+    <!-- Floating Action Button -->
+    <div class="floating-button animated bouncein delay-3">
+        <a href="checkout.html" class="btn-floating btn-large waves-effect waves-light accent-color btn z-depth-1">
+            <i class="ion-ios-cart"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Product Title -->
+<div class="center-align p-20">
+    <span class="small grey-text">{{currentProduct.category_name}}</span>
+    <h3 class="m-0"><strong>{{currentProduct.name}}</strong></h3>
+    <h4 ng-repeat="(k, p) in currentProduct.prices" ng-if="$index < 1">${{p}} for {{k}}</h4>
+</div>
+
+<!-- Prduct Description -->
+<div class="product-description">
+
+    <ul tabs>
+        <li class="tab col s3"><a class="active" href="#info">Info</a></li>
+        <li class="tab col s3"><a href="#about">About</a></li>
+    </ul>
+    <div class="p-20" id="info">
+        <p class="text-flow">{{currentProduct.body}}</p>
+        <p class="text-flow" ng-hide="currentProduct.body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet culpa deleniti exercitationem fugit illum iusto, molestias natus obcaecati, quam quis quod quos vel veniam voluptas voluptatem. A eveniet, impedit nemo neque quaerat quod. Accusantium consequuntur corporis harum laudantium possimus quisquam veritatis. Cumque dolor earum est eveniet maiores nisi, tempora vero.</p>
+    </div>
+    <div class="p-20" id="about">
+        <p class="text-flow" ng-hide="currentProduct.body">Amet culpa deleniti exercitationem fugit illum iusto, molestias natus obcaecati, quam quis quod quos vel veniam voluptas voluptatem. A eveniet, impedit nemo neque quaerat quod. Accusantium consequuntur corporis harum laudantium possimus quisquam veritatis. Cumque dolor earum est eveniet maiores nisi, tempora vero.</p>
+    </div>
+</div>
+
+<div class="product-variation">
+    <h5><strong>Choose amount:</strong></h5>
+    <form action="#">
+        <p ng-repeat="(k, p) in currentProduct.prices" ng-show="p">
+            <input name="price" ng-model="amount" type="radio" id="{{k}}"/>
+            <label for="{{k}}">{{k.replace("_", " ")}} - <strong>${{p}}</strong></label>
+        </p>
+    </form>
+</div>
+
+<div class="product-variation">
+    <a ng-click="addToCard()" class="waves-effect waves-light btn-large modal-trigger accent-color block m-20" >Add to Cart</a>
+</div>

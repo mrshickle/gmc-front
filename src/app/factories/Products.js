@@ -4,7 +4,9 @@ angular
 
 /** @ngInject */
 function Products($http, $resource) {
-  this.Menu = $resource('data/menu.json');
+  this.menu = $resource('data/menu.json');
+  this.getCategories = $http.get('data/category.json');
+  this.category = $resource('data/category.json');
 
   return this;
 }

@@ -1,8 +1,11 @@
 angular
   .module('app')
-  .controller('loginPageController', LoginPageController);
+  .controller('mainPageController', MainPageController);
 
 /** @ngInject */
-function LoginPageController($scope, $state, setToolbarService) {
-  setToolbarService('', false, false, 'tool-login');
+function MainPageController($scope, $state, setToolbarService, productFactory) {
+  setToolbarService('GMC', true, true, '');
+  this.categories = productFactory.category.get(function (data) {
+    $scope.categories = data.categories;
+  });
 }

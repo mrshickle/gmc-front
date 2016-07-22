@@ -1,0 +1,22 @@
+<div ng-repeat="(key, productList) in products" id="{{key}}-tab">
+    <div class="grid-item">
+        <category-product ng-repeat="p in productList"
+                          image="{{p.thumb_image_url}}"
+                          product-slug="{{p.slug}}"
+                          category="{{active}}"
+                          name="{{p.name}}"
+                          prices="p.prices"
+                          ng-if="$index%2 == 0"
+        ></category-product>
+    </div>
+    <div class="grid-item">
+        <category-product ng-repeat="p in productList"
+                          image="{{p.thumb_image_url}}"
+                          product-slug="{{p.slug}}"
+                          category="{{active}}"
+                          name="{{p.name}}"
+                          prices="p.prices"
+                          ng-if="$index%2 == 1"
+        ></category-product>
+    </div>
+</div>

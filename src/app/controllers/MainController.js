@@ -8,4 +8,15 @@ function MainController($scope, $state, $rootScope) {
   $rootScope.$on('setTitleEvent', function (event, data) {
     $scope.toolbar = data;
   });
+
+  $scope.sideBarOpen = false;
+
+  $scope.toggleSideBar = function () {
+    $scope.sideBarOpen = true;
+  };
+  $rootScope.$on('$stateChangeSuccess',
+    function () {
+      $scope.sideBarOpen = false;
+    }
+  )
 }

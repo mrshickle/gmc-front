@@ -11,15 +11,18 @@ angular
  */
 /** @ngInject */
 function ShuttleToolbarController($scope) {
-
+  $scope.toggleSideBar = function () {
+    $scope.$parent.sideBarOpen = true;
+  };
 }
+
 /** @ngInject */
 function ToolbarFactory($rootScope) {
-  function setToolbarValues(title, material, user, extraClass) {
+  function setToolbarValues(title, material, action, extraClass) {
     var toolbar = {
       title: title,
       material: material,
-      user: user,
+      action: action,
       class: extraClass
     };
     $rootScope.$broadcast('setTitleEvent', toolbar);

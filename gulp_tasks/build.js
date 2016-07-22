@@ -26,6 +26,7 @@ function build() {
   const htmlFilter = filter(conf.path.tmp('*.html'), {restore: true});
   const jsFilter = filter(conf.path.tmp('**/*.js'), {restore: true});
   const cssFilter = filter(conf.path.tmp('**/*.css'), {restore: true});
+  const fontFilter = filter(conf.path.tmp('**/*.{eot,svg,ttf,woff}'), {restore: true});
 
   return gulp.src(conf.path.tmp('/index.html'))
     .pipe(inject(partialsInjectFile, partialsInjectOptions))
@@ -47,5 +48,7 @@ function build() {
     .pipe(htmlFilter)
     .pipe(htmlmin())
     .pipe(htmlFilter.restore)
+    .pipe(fontFilter)
+    .pipe(fontFilter.restore)
     .pipe(gulp.dest(conf.path.dist()));
 }

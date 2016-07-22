@@ -1,0 +1,34 @@
+<div class="page fullscreen grey lighten-4">
+
+    <div class="add-credit-card login-form login-form z-depth-1">
+        <h1>Add Credit Card</h1>
+        <div class="input-field">
+            <input id="cc-number" type="text" class="validate">
+            <label for="cc-number">Credit Card Number</label>
+        </div>
+        <div class="input-field ">
+            <input id="cc-name" type="text" class="validate">
+            <label for="cc-name">Name On Card</label>
+        </div>
+        <div class="input-field">
+            <label for="cc-exp-date">Expiration Date</label>
+            <input mdc-datetime-picker="" date="true" time="false" type="text" id="cc-exp-date" ng-model="ccDate" format="MM/YY">
+        </div>
+        <a class="waves-effect waves-light btn-large accent-color
+         block m-b-20 animated bouncein delay-2" ui-sref="CreditCards">Add Credit Card</a>
+    </div>
+</div>
+
+<div class="col">
+    <a class='btn' href='#demoModal' modal>Show Modal</a>
+</div>
+<!-- Modal Structure -->
+<div id="demoModal" class="modal">
+    <div class="modal-content">
+        <h4>Modal header</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>

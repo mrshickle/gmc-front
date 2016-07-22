@@ -4,5 +4,6 @@ angular
 
 /** @ngInject */
 function AddCreditCardPageController($scope, $state, setToolbarService) {
-  setToolbarService('', false, false, '');
+  setToolbarService('', false, false, 'tool-login');
+  $scope.ccDate = '';
 }

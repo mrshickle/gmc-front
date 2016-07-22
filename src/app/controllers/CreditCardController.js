@@ -4,5 +4,5 @@ angular
 
 /** @ngInject */
 function CreditCardController($scope, $state, setToolbarService) {
-  setToolbarService('', false, false, '');
+  setToolbarService('Manage Credit Cards', false, 'addCreditCard', '');
 }

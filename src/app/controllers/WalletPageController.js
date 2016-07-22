@@ -4,5 +4,5 @@ angular
 
 /** @ngInject */
 function WalletPageController($scope, $state, setToolbarService) {
-  setToolbarService('', false, false, '');
+  setToolbarService('Wallet', false, false, '');
 }

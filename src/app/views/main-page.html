@@ -1,10 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="hero-material animated fadeindown">
+    <div class="parallax bg-main-page">
+
+        <div class="fixed-action-btn floating-button animated bouncein delay-3 horizontal click-to-toggle">
+            <a href="#!" class="btn-floating btn-large accent-color">
+                <i class="ion-android-cart"></i>
+            </a>
+            <ul>
+                <li><a class="btn-floating red"><i class="ion-ios-heart"></i></a></li>
+                <li><a class="btn-floating yellow darken-1"><i class="ion-android-star"></i></a></li>
+                <li><a class="btn-floating green"><i class="ion-thumbsup"></i></a></li>
+                <li><a class="btn-floating blue"><i class="ion-android-share-alt"></i></a></li>
+            </ul>
+        </div>
+        <div class="banner-title">Online Shop</div>
+    </div>
+</div>
+
+<div class="animated fadeinup delay-1">
+
+    <shop-category-directive ng-repeat="c in categories"
+                             image="{{c.image}}"
+                             title="{{c.title}}"
+                             subtitle="{{c.subtitle}}"
+                             delay="{{$index}}"
+                             full="{{c.full}}"
+    ></shop-category-directive>
+
+    <div class="clr"></div>
+</div>

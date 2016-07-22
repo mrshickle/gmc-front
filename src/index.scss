@@ -1,34 +1,137 @@
 $primary-color: #009688;
 $accent-color: #484848;
 
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela Round'), local('VarelaRound-Regular'), url(/4jr0uSos5wiut5cpjronF5uFdDttMLvmWuJdhhgs.ttf) format('truetype');
+}
+
 .accent-text {
   color: $accent-color !important;
 }
+
 .accent-color {
   background-color: $accent-color !important;
 }
+
 .accent-border {
   border-color: $accent-color !important;
 }
+
 .primary-text {
   color: $primary-color !important;
 }
+
 .primary-color {
   background-color: $primary-color !important;
 }
+
 .primary-border {
   border-color: $primary-color !important;
 }
 
+body, #main, .page {
+  height: 100%;
+}
 
 .logo-main {
-  width:100%;
+  width: 100%;
   position: absolute;
   background: url(/img/logo-banner.png) no-repeat center / 70% !important;
   z-index: 1000;
   height: 50%;
 }
 
-.home-page {
-  margin-top: -56px;
+//shop page
+.bg-main-page {
+  background: url(/img/main-page-top.jpg) no-repeat center / cover !important;
+}
+
+.prd-padding {
+  padding: 10px;
+}
+
+.sidebar-open-left {
+  transform: translateX(0);
+}
+
+.side-nav {
+  width: 280px;
+  transition: .25s ease-in-out;
+}
+
+.wallet {
+  height: 100%;
+  h1 {
+    font-size: 6rem !important;
+    line-height: 6rem;
+    margin-bottom: 15px !important;
+    margin-top: 10px;
+  }
+  .image-container {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .row {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+.wallet-actions {
+  i {
+    float: right;
+  }
+}
+
+.credit-cards {
+  .card-author {
+    padding-top: 20px;
+  }
+}
+
+.recharge {
+  height: 100%;
+  .image-container {
+    width: 55%;
+    margin: 0 auto;
+  }
+  .tabs .tab a {
+    color: #fff;
+  }
+  .tabs .indicator {
+    background-color: #fff;
+  }
+  .p-20 {
+    margin: 0 30px;
+  }
+  input[type=text] {
+    font-size: 2rem;
+    height: 5rem;
+    border-color: #fff;
+  }
+  label {
+    color: #fff;
+  }
+  .caret {
+    color: #fff !important;
+  }
+  .tabs-container {
+    text-align: left;
+  }
+}
+
+.add-credit-card {
+  margin-top: 56px;
+}
+
+.dtp > .dtp-content > .dtp-date-view > header.dtp-header {
+  background-color: darken($primary-color, 5);
+}
+
+.dtp div.dtp-date, .dtp div.dtp-time, .dtp table.dtp-picker-days tr > td > a.selected {
+  background-color: $primary-color;
 }

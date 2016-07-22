@@ -1,0 +1,36 @@
+<div class="bg-gradient center white-text recharge">
+
+    <div class="image-container">
+        <img src="/img/piggy.png" alt="">
+    </div>
+
+    <div class="tabs-container">
+        <ul tabs>
+            <li class="tab col s3"><a class="active" href="#bank">Bank</a></li>
+            <li class="tab col s3"><a href="#promo">Promo Code</a></li>
+        </ul>
+        <div class="p-20" id="bank">
+            <div input-field>
+                <span>Amount</span>
+                <select class="white-text" ng-model="rechargeAmount" material-select watch id="amount">
+                    <option ng-repeat="value in rechargeOptions" value="{{value.value}}">{{value.text}}</option>
+                </select>
+            </div>
+            <div input-field>
+                <span>Credit Card</span>
+                <select class="white-text" ng-model="creditCard" material-select watch id="creditCard">
+                    <option ng-repeat="value in creditCardOptions" value="{{value}}">{{value}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="p-20" id="promo">
+            <div input-field>
+                <input type="text" ng-model="promoCode" length="10">
+                <label>Promo Code</label>
+            </div>
+        </div>
+    </div>
+
+    <a ui-sref="Wallet" class="waves-effect waves-light btn-large transparent m-20">Submit</a>
+
+</div>
